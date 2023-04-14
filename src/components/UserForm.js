@@ -28,25 +28,25 @@ const UserForm = (props) => {
             }
                 <div>
                     <label>First Name: </label> 
-                    <input value={firstName} type="text" onChange={ (e) => setFirstName(e.target.value) } />
+                    <input class="w-30 m-3 border border-sky-500" value={firstName} type="text" onChange={ (e) => setFirstName(e.target.value) } />
                 </div>
                 <div>
                     <label>Last Name: </label> 
-                    <input value={lastName} type="text" onChange={ (e) => setLastName(e.target.value) } />
+                    <input class="w-30 m-3 border border-sky-500" value={lastName} type="text" onChange={ (e) => setLastName(e.target.value) } />
                 </div>
                 <div>
                     <label>Email: </label> 
-                    <input value={email} type="text" onChange={ (e) => setEmail(e.target.value) } />
+                    <input class="w-30 m-3 border border-sky-500" value={email} type="text" onChange={ (e) => setEmail(e.target.value) } />
                 </div>
                 <div>
                     <label>Password: </label> 
-                    <input value={password} type="text" onChange={ (e) => setPassword(e.target.value) } />
+                    <input class="w-30 m-3 border border-sky-500" value={password} type="text" onChange={ (e) => setPassword(e.target.value) } />
                 </div>
                 <div>
                     <label>Confirm Password: </label> 
-                    <input value={confirmPassword} type="text" onChange={ (e) => setConfirmPassword(e.target.value) } />
+                    <input class="w-30 m-3 border border-sky-500" value={confirmPassword} type="text" onChange={ (e) => setConfirmPassword(e.target.value) } />
                 </div>
-                <input type="submit" value="Create User" />
+                <input class="rounded-full w-35 m-3 border border-sky-500" type="submit" value="Create User" />
             </form>
             
             <div>
