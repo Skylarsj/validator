@@ -3,12 +3,15 @@ import React, {useState} from 'react';
 
 
 const UserForm = (props) => {
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");  
-    const [confirmPassword, setConfirmPassword] = useState("");  
-    const [hasBeenSubmitted, setHasBeenSubmitted] = useState(false);
+
+
+    const [form, setFrom] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
+        confirmPassword: ""
+    });
 
     const createUser = (e) => {
 
@@ -28,7 +31,7 @@ const UserForm = (props) => {
             }
                 <div>
                     <label>First Name: </label> 
-                    <input class="w-30 m-3 border border-sky-500" value={firstName} type="text" onChange={ (e) => setFirstName(e.target.value) } />
+                    <input class="w-30 m-3 border border-sky-500" id="firstName" type="text" onChange={ (e) => setFirstName(e.target.value) } />
                 </div>
                 <div>
                     <label>Last Name: </label> 
