@@ -14,40 +14,44 @@ const UserForm = (props) => {
     });
 
     const createUser = (e) => {
+        setFrom({
+            ...form,
+            [e.target.name]: e.target.value
+    })
 
         e.preventDefault();
 
-        setHasBeenSubmitted(true);
+        //setHasBeenSubmitted(true);
 
     };
     
     return(
         <div>
             <form onSubmit={ createUser }>
-            {
-                hasBeenSubmitted ? 
-                <h3>Thank you for submitting the form!</h3> :
-                <h3>Welcome, please submit the form.</h3> 
+            //{
+               // hasBeenSubmitted ? 
+               // <h3>Thank you for submitting the form!</h3> :
+                //<h3>Welcome, please submit the form.</h3> 
             }
                 <div>
                     <label>First Name: </label> 
-                    <input class="w-30 m-3 border border-sky-500" id="firstName" type="text" onChange={ (e) => setFirstName(e.target.value) } />
+                    <input class="w-30 m-3 border border-sky-500" id="firstName" name="firstName" type="text" onChange={createUser} />
                 </div>
                 <div>
-                    <label>Last Name: </label> 
-                    <input class="w-30 m-3 border border-sky-500" value={lastName} type="text" onChange={ (e) => setLastName(e.target.value) } />
+                    <label>First Name: </label> 
+                    <input class="w-30 m-3 border border-sky-500" id="lasName" name="lasName" type="text" onChange={createUser} />
                 </div>
                 <div>
-                    <label>Email: </label> 
-                    <input class="w-30 m-3 border border-sky-500" value={email} type="text" onChange={ (e) => setEmail(e.target.value) } />
+                    <label>First Name: </label> 
+                    <input class="w-30 m-3 border border-sky-500" id="email" name="email" type="text" onChange={createUser} />
                 </div>
                 <div>
-                    <label>Password: </label> 
-                    <input class="w-30 m-3 border border-sky-500" value={password} type="text" onChange={ (e) => setPassword(e.target.value) } />
+                    <label>First Name: </label> 
+                    <input class="w-30 m-3 border border-sky-500" id="passowrd" name="password" type="text" onChange={createUser} />
                 </div>
                 <div>
-                    <label>Confirm Password: </label> 
-                    <input class="w-30 m-3 border border-sky-500" value={confirmPassword} type="text" onChange={ (e) => setConfirmPassword(e.target.value) } />
+                    <label>First Name: </label> 
+                    <input class="w-30 m-3 border border-sky-500" id="confrimPassword" name="confirmPassword" type="text" onChange={createUser} />
                 </div>
                 <input class="rounded-full w-35 m-3 border border-sky-500" type="submit" value="Create User" />
             </form>
